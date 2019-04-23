@@ -10,7 +10,7 @@ var dl = new downloader({
 }).on("progress", function (progress) {
     var len = parseInt(progress.filesize);
     var cur = parseInt(progress.dataWritten);
-    // console.log('Downloaded: ' + progress.progress + '%'); 
+    // console.log('Downloaded: ' + progress.progress + '%');
     var bar = new ProgressBar('  downloading [:bar] :rate :percent :etas', {
         complete: '=',
         incomplete: ' ',
@@ -26,11 +26,11 @@ var dl = new downloader({
 
 });
 // dl.on("start", function(){
-//     console.log("Download started") 
+//     console.log("Download started")
 //  });
 dl.on("error", function(err){
-    console.log('Some error occurred:' + err); 
+    console.log('Some error occurred:' + err);
 });
 dl.on("end", function(){
-    console.log('Download finished'); 
- });
+    console.log('Download finished');
+});
